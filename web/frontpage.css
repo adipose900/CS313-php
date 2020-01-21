@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1{
     color:black;
     background-color: lightgray;
@@ -6,4 +7,14 @@ body{
     color:black;
     background-color: lightsteelblue;
     align-content: center;
+=======
+h1{
+    color:black;
+    background-color: lightgray;
+}
+body{
+    color:black;
+    background-color: lightsteelblue;
+    align-content: center;
+>>>>>>> 485adf58130795d93077b651c6644000ecb52b19
 }
