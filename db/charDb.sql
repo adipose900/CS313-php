@@ -1,23 +1,23 @@
 CREATE DATABASE smashbros_characters;
 
 CREATE TABLE characters (
-    char_id int,
-    char_name char(255),
-    ser_id int,
-    votes int,   
+    id int,
+    name_of char(255),
+    series_id int,
+    votes int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (series_id) REFERENCES series (id)
 ); 
 CREATE TABLE series (
-    ser_id int,
-    ser_name char(255),  
-); 
-CREATE TABLE serieslink (
-    ser_id int,
-    char_id int,
+    id int,
+    name char(255), 
+    PRIMARY KEY (id)
 ); 
 CREATE TABLE users (
-    user_id int,
-    user_name char(255),
-    user_pass char(255), 
-    char_id int,
-    votes int,   
+    id int,
+    name char(255),
+    pass char(255), 
+    char_voted_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (char_voted_id) REFERENCES characters (id)
 ); 
